@@ -23,6 +23,8 @@
       "ES2022",
       "dom"
     ],
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
