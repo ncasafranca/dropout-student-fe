@@ -1,3 +1,26 @@
 h1 {
     text-align: center;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    font-size: 35px;
+}
+
+h3 {
+    text-align: center;
+    color: crimson;
+}
+
+button {
+    align-content: center;
+    margin-left: 90vh;
+    width: 200px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    border-radius: 10px;
+}
+
+form {
+    align-items: center;
+
 }

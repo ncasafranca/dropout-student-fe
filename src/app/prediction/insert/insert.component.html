@@ -1,1 +1,328 @@
 <h1>Churn Customer Prediction</h1>
+<div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">Name</label>
+        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">LastName</label>
+        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">Gender</label>
+        <select class="form-control form-control-sm">
+            <option>Select Option</option>
+            <option value="">Femenino</option>
+            <option value="">Masculino</option>
+          </select>
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">SeniorCitizen</label>
+        <select class="form-control form-control-sm">
+            <option>Select Option</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">Partner</label>
+        <select class="form-control form-control-sm">
+            <option>Select Option</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">Dependents</label>
+        <select class="form-control form-control-sm">
+            <option>Select Option</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">Tenure</label>
+        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">PhoneService</label>
+        <select class="form-control form-control-sm">
+            <option>Select Option</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="firstName">MultipleLines</label>
+        <select class="form-control form-control-sm">
+            <option>Select Option</option>
+            <option value="">Si</option>
+            <option value="">No</option>
+          </select>
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">InternetService</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">OnlineSecurity</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">OnlineBackup</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">DeviceProtection</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">TechSupport</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">StreamingTV</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">StreamingMovies</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">Contract</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">1 year</option>
+                <option value="">2 year</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">PaperlessBilling</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">PaymentMethod</label>
+            <select class="form-control form-control-sm">
+                <option>Select Option</option>
+                <option value="">Si</option>
+                <option value="">No</option>
+            </select>
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">MonthlyCharges</label>
+            <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName">TotalCharges</label>
+            <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row col-md-12">
+        <div class="form-group col-md-12">
+            <button class="btn btn-success" (click)="predecir()">Predict Customer Churn</button>
+        </div>
+    </div>
+
+    <div class="form-row col-md-12">
+        <div class="form-group col-md-12">
+            <h3 *ngIf="this.result">{{this.msg}}</h3>
+        </div>
+    </div>
+    
+</div>
