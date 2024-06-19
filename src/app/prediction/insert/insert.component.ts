@@ -15,7 +15,7 @@ export class InsertComponent implements OnInit {
     this.modelo = await tf.loadLayersModel('/assets/tfjs/model.json');
     console.log('Modelo cargado');
 
-    // this.predecir();
+    this.predecir();
   }
 
   ngOnInit(): void {
@@ -25,12 +25,9 @@ export class InsertComponent implements OnInit {
   }
 
   predecir() {
-    // let arreglo: any = [[
-    //   [[1], [0], [0], [111], [2], [1], [0], [2], [1], [0], [0], [0], [0], [0], [0], [1], [3], [0], [0]]
-    // ]];
-    var arr = [[1,1,1,1,1,1,0,4,1,1,2,0,0,0,0,1,3,74.40,306.60]];
+    var arr = [[1,1,1,1,1,22,8,5,1,0,1,0,1,20,5,13.800000,0,0,5,6,5,12.000000,0,-3.12]];
 
-    var tensor = tf.tensor2d(arr);
+    var tensor = tf.tensor2d(arr, [1, 24]);
     var resultado = (this.modelo.predict(tensor) as tf.Tensor).dataSync();
 
     console.log(...resultado);
