@@ -2,8 +2,8 @@
 <div>
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">Name</label>
-        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+        <label for="maritalStatus">Marital status</label>
+        <input type="text" class="form-control form-control-sm" id="maritalStatus" name="maritalStatus" formControlName="maritalStatus">
         <div class="form-text text-danger">
             <!-- <span>
             Este campo es obligatorio
@@ -14,8 +14,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">LastName</label>
-        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+        <label for="applicationMode">Application mode</label>
+        <input type="text" class="form-control form-control-sm" id="applicationMode" name="applicationMode" formControlName="applicationMode">
         <div class="form-text text-danger">
             <!-- <span>
             Este campo es obligatorio
@@ -26,12 +26,13 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">Gender</label>
-        <select class="form-control form-control-sm">
+        <label for="applicationOrder">Application order</label>
+        <!-- <select class="form-control form-control-sm">
             <option>Select Option</option>
             <option value="">Femenino</option>
             <option value="">Masculino</option>
-          </select>
+          </select> -->
+        <input type="text" class="form-control form-control-sm" id="applicationOrder" name="applicationOrder" formControlName="applicationOrder">
         <div class="form-text text-danger">
             <!-- <span>
             Este campo es obligatorio
@@ -41,12 +42,13 @@
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">SeniorCitizen</label>
-        <select class="form-control form-control-sm">
+        <label for="daytimeAttendance">Daytime/evening attendance</label>
+        <!-- <select class="form-control form-control-sm">
             <option>Select Option</option>
             <option value="">Si</option>
             <option value="">No</option>
-          </select>
+          </select> -->
+        <input type="text" class="form-control form-control-sm" id="daytimeAttendance" name="daytimeAttendance" formControlName="daytimeAttendance">
         <div class="form-text text-danger">
             <!-- <span>
             Este campo es obligatorio
@@ -56,12 +58,13 @@
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">Partner</label>
-        <select class="form-control form-control-sm">
+        <label for="previousQualification">Previous qualification</label>
+        <!-- <select class="form-control form-control-sm">
             <option>Select Option</option>
             <option value="">Si</option>
             <option value="">No</option>
-          </select>
+          </select> -->
+        <input type="text" class="form-control form-control-sm" id="daytimeAttendance" name="daytimeAttendance" formControlName="daytimeAttendance">
         <div class="form-text text-danger">
             <!-- <span>
             Este campo es obligatorio
@@ -71,12 +74,48 @@
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">Dependents</label>
+        <label for="mothersQualification">Mother's qualification</label>
+        <input type="text" class="form-control form-control-sm" id="mothersQualification" name="mothersQualification" formControlName="mothersQualification">
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="mothersOccupation">Mother's occupation</label>
+        <input type="text" class="form-control form-control-sm" id="mothersOccupation" name="mothersOccupation" formControlName="mothersOccupation">
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="fathersOccupation">Father's occupation</label>
+        <input type="text" class="form-control form-control-sm" id="fathersOccupation" name="fathersOccupation" formControlName="fathersOccupation">
+        <div class="form-text text-danger">
+            <!-- <span>
+            Este campo es obligatorio
+            </span> -->
+        </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="displaced">Displaced</label>
         <select class="form-control form-control-sm">
             <option>Select Option</option>
-            <option value="">Si</option>
-            <option value="">No</option>
-          </select>
+            <option value="1">Si</option>
+            <option value="0">No</option>
+        </select>
         <div class="form-text text-danger">
             <!-- <span>
             Este campo es obligatorio
@@ -87,55 +126,11 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-        <label for="firstName">Tenure</label>
-        <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
-        <div class="form-text text-danger">
-            <!-- <span>
-            Este campo es obligatorio
-            </span> -->
-        </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-        <label for="firstName">PhoneService</label>
-        <select class="form-control form-control-sm">
-            <option>Select Option</option>
-            <option value="">Si</option>
-            <option value="">No</option>
-          </select>
-        <div class="form-text text-danger">
-            <!-- <span>
-            Este campo es obligatorio
-            </span> -->
-        </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-        <label for="firstName">MultipleLines</label>
-        <select class="form-control form-control-sm">
-            <option>Select Option</option>
-            <option value="">Si</option>
-            <option value="">No</option>
-          </select>
-        <div class="form-text text-danger">
-            <!-- <span>
-            Este campo es obligatorio
-            </span> -->
-        </div>
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="firstName">InternetService</label>
+            <label for="debtor">Debtor</label>
             <select class="form-control form-control-sm">
                 <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
+                <option value="1">Si</option>
+                <option value="0">No</option>
             </select>
             <div class="form-text text-danger">
                 <!-- <span>
@@ -147,11 +142,23 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">OnlineSecurity</label>
+            <label for="tuition">Tuition fees up to date</label>
+            <input type="text" class="form-control form-control-sm" id="tuition" name="tuition" formControlName="tuition">
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="gender">Gender</label>
             <select class="form-control form-control-sm">
                 <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
+                <option value="1">Masculino</option>
+                <option value="0">Femenino</option>
             </select>
             <div class="form-text text-danger">
                 <!-- <span>
@@ -163,11 +170,11 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">OnlineBackup</label>
+            <label for="scholarshipHolder">Scholarship holder</label>
             <select class="form-control form-control-sm">
                 <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
+                <option value="1">Si</option>
+                <option value="0">No</option>
             </select>
             <div class="form-text text-danger">
                 <!-- <span>
@@ -179,12 +186,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">DeviceProtection</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
+            <label for="ageAtEnrollment">Age at enrollment</label>
+            <input type="text" class="form-control form-control-sm" id="ageAtEnrollment" name="ageAtEnrollment" formControlName="ageAtEnrollment">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -195,12 +198,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">TechSupport</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
+            <label for="curricularUnits1stSemEvaluations">Curricular units 1st sem (evaluations)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits1stSemEvaluations" name="curricularUnits1stSemEvaluations" formControlName="curricularUnits1stSemEvaluations">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -211,12 +210,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">StreamingTV</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
+            <label for="curricularUnits1stSemGrade">Curricular units 1st sem (grade)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits1stSemGrade" name="curricularUnits1stSemGrade" formControlName="curricularUnits1stSemGrade">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -227,12 +222,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">StreamingMovies</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
+            <label for="curricularUnits1stSemWithoutEvaluations">Curricular units 1st sem (without evaluations)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits1stSemWithoutEvaluations" name="curricularUnits1stSemWithoutEvaluations" formControlName="curricularUnits1stSemWithoutEvaluations">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -243,12 +234,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">Contract</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">1 year</option>
-                <option value="">2 year</option>
-            </select>
+            <label for="curricularUnits2ndSemCredited">Curricular units 2nd sem (credited)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits2ndSemCredited" name="curricularUnits2ndSemCredited" formControlName="curricularUnits2ndSemCredited">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -259,12 +246,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">PaperlessBilling</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
+            <label for="curricularUnits2ndSemEnrolled">Curricular units 2nd sem (enrolled)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits2ndSemEnrolled" name="curricularUnits2ndSemEnrolled" formControlName="curricularUnits2ndSemEnrolled">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -275,12 +258,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">PaymentMethod</label>
-            <select class="form-control form-control-sm">
-                <option>Select Option</option>
-                <option value="">Si</option>
-                <option value="">No</option>
-            </select>
+            <label for="curricularUnits2ndSemEvaluations">Curricular units 2nd sem (evaluations)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits2ndSemEvaluations" name="curricularUnits2ndSemEvaluations" formControlName="curricularUnits2ndSemEvaluations">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -291,8 +270,8 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">MonthlyCharges</label>
-            <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+            <label for="curricularUnits2ndSemApproved">Curricular units 2nd sem (approved)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits2ndSemApproved" name="curricularUnits2ndSemApproved" formControlName="curricularUnits2ndSemApproved">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
@@ -303,8 +282,32 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="firstName">TotalCharges</label>
-            <input type="text" class="form-control form-control-sm" id="firstName" name="firstName" formControlName="firstName">
+            <label for="curricularUnits2ndSemGrade">Curricular units 2nd sem (grade)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits2ndSemGrade" name="curricularUnits2ndSemGrade" formControlName="curricularUnits2ndSemGrade">
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="curricularUnits2ndWithoutEvaluations">Curricular units 2nd sem (without evaluations)</label>
+            <input type="text" class="form-control form-control-sm" id="curricularUnits2ndWithoutEvaluations" name="curricularUnits2ndWithoutEvaluations" formControlName="curricularUnits2ndWithoutEvaluations">
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="gdp">GDP</label>
+            <input type="text" class="form-control form-control-sm" id="gdp" name="gdp" formControlName="gdp">
             <div class="form-text text-danger">
                 <!-- <span>
                 Este campo es obligatorio
