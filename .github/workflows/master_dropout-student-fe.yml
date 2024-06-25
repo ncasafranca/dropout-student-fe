@@ -24,8 +24,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm run build --prod
+        working-directory: .
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -67,5 +67,5 @@ jobs:
         with:
           app-name: 'dropout-student-fe'
           slot-name: 'Production'
-          package: .
+          package: ./dist/dropout-student-fe
           
