@@ -111,6 +111,8 @@ export class InsertComponent implements OnInit {
 
     this.fillData();
 
+    // this.dataTest();
+
     console.log("body: ", this.body)
     this.apiService.prediction(this.body).subscribe ( 
       (data) => {
