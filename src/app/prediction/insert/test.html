@@ -1,8 +1,8 @@
 <h1>Churn Customer Prediction</h1>
 
-<form [formGroup]="formStudent" method="post">
+<form [formGroup]="formStudent">
 
-    <div formGroupName = "datosEstudiante">
+    <div>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="firstName">Nombre</label>
@@ -30,7 +30,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="maritalStatus">Estado Civil</label>
-            <select class="form-control form-control-sm" formControlName = "maritalStatus">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Soltero</option>
                 <option value="2">Casado</option>
@@ -50,7 +50,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="applicationMode">Modo de aplicación</label>
-            <select class="form-control form-control-sm" formControlName="applicationMode">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Ordinario</option>
                 <option value="2">Tercio superior colegio</option>
@@ -83,7 +83,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="daytimeAttendance">Turno</label>
-            <select class="form-control form-control-sm" formControlName="daytimeAttendance">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Mañana</option>
                 <option value="0">Tarde</option>
@@ -99,7 +99,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="previousQualification">Grado alcanzado</label>
-            <select class="form-control form-control-sm" formControlName="previousQualification">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Educación secundaria</option>
                 <option value="2">Educación superior</option>
@@ -116,7 +116,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="mothersQualification">Calificación de la madre</label>
-            <select class="form-control form-control-sm" formControlName="mothersQualification">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Educación secundaria</option>
                 <option value="2">Educación superior</option>
@@ -134,7 +134,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="mothersOccupation">Ocupación de la madre</label>
-            <select class="form-control form-control-sm" formControlName="mothersOccupation">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Estudiante</option>
                 <option value="2">Profesional de Salud</option>
@@ -153,7 +153,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="fathersOccupation">Ocupación del padre</label>
-            <select class="form-control form-control-sm" formControlName="fathersOccupation">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Estudiante</option>
                 <option value="2">Profesional de Salud</option>
@@ -172,7 +172,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="displaced">Traslado</label>
-            <select class="form-control form-control-sm" formControlName="displaced">
+            <select class="form-control form-control-sm">
                 <option>Select Option</option>
                 <option value="1">Si</option>
                 <option value="0">No</option>
@@ -188,7 +188,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="debtor">Deudor</label>
-                <select class="form-control form-control-sm" formControlName="debtor">
+                <select class="form-control form-control-sm">
                     <option>Select Option</option>
                     <option value="1">Si</option>
                     <option value="0">No</option>
@@ -204,7 +204,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="tuition">Matrícula al día</label>
-                <select class="form-control form-control-sm" formControlName="tuition">
+                <select class="form-control form-control-sm">
                     <option>Select Option</option>
                     <option value="1">Si</option>
                     <option value="0">No</option>
@@ -220,7 +220,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="gender">Género</label>
-                <select class="form-control form-control-sm" formControlName="gender">
+                <select class="form-control form-control-sm">
                     <option>Select Option</option>
                     <option value="1">Masculino</option>
                     <option value="0">Femenino</option>
@@ -236,7 +236,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="scholarshipHolder">Beca</label>
-                <select class="form-control form-control-sm" formControlName="scholarshipHolder">
+                <select class="form-control form-control-sm">
                     <option>Select Option</option>
                     <option value="1">Si</option>
                     <option value="0">No</option>
@@ -380,10 +380,10 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="form-row col-md-12">
             <div class="form-group col-md-12">
-                <button class="btn btn-success" [disabled]="!enableButtonPredict" (click)="predecir()">Predict dropout student</button>
+                <button class="btn btn-success" (click)="predecir()">Predict dropout student</button>
             </div>
         </div>
 
@@ -392,10 +392,6 @@
                 <h3 *ngIf="this.result">{{this.msg}}</h3>
             </div>
         </div>
-
-        <!-- <pre>
-            {{ formStudent.value | json }}
-        </pre> -->
         
     </div>
 </form>
