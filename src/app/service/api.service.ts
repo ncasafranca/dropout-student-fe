@@ -8,7 +8,7 @@ import { Prediction } from 'src/app/model/Prediction';
 })
 export class ApiService {
 
-  private urlApi = "http://localhost:8080/api/v1/prediction";
+  private urlApi = "http://dropout-student-api.azurewebsites.net/api/v1/prediction";
   constructor(private http: HttpClient) { }
 
   public prediction(prediction: Prediction): Observable<any> {
