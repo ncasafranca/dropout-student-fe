@@ -109,9 +109,9 @@ export class InsertComponent implements OnInit {
 
     // this.getPredictRisk();
 
-    // this.fillData();
+    this.fillData();
 
-    this.dataTest();
+    // this.dataTest();
 
     console.log("body: ", this.body)
     this.apiService.prediction(this.body).subscribe ( 
