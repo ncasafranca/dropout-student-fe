@@ -113,7 +113,7 @@ export class InsertComponent implements OnInit {
 
     // this.dataTest();
 
-    console.log("body: ", this.body)
+    // console.log("body: ", this.body)
     this.apiService.prediction(this.body).subscribe ( 
       (data) => {
         swal.fire({
@@ -178,7 +178,8 @@ export class InsertComponent implements OnInit {
     let contador = 0;
     Object.values(this.body).forEach( value => {
       contador++;
-      if (contador <= 23) {
+      if (contador >= 4 && contador <= 26) {
+        // console.log(`contador = ${contador} => ${value}`)
         this.tensor[0].push(value);
       }
     });
@@ -192,9 +193,9 @@ export class InsertComponent implements OnInit {
   }
 
   dataTest() {
-    this.body.codeStudent = "U202014690";
-    this.body.firstName = "Niel";
-    this.body.lastName = "Casafranca";
+    // this.body.codeStudent = "U202014690";
+    // this.body.firstName = "Niel";
+    // this.body.lastName = "Casafranca";
     this.body.maritalStatus = 1;
     this.body.applicationMode =  8;
     this.body.applicationOrder = 5;
