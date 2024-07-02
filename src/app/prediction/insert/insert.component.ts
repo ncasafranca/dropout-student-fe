@@ -178,12 +178,12 @@ export class InsertComponent implements OnInit {
     let contador = 0;
     Object.values(this.body).forEach( value => {
       contador++;
-      if (contador <= 24) {
+      if (contador <= 23) {
         this.tensor[0].push(value);
       }
     });
 
-    var tensor = tf.tensor2d(this.tensor, [1, 24]);
+    var tensor = tf.tensor2d(this.tensor, [1, 23]);
     var resultado = (this.modelo.predict(tensor) as tf.Tensor).dataSync();
 
     var predictRisk = resultado[0];
