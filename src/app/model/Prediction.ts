@@ -1,4 +1,7 @@
 export interface Prediction {
+    codeStudent?: string;
+    firstName?: string;
+    lastName?: string;
     maritalStatus?: number;
     applicationMode?: number;
     applicationOrder?: number;
@@ -22,6 +25,5 @@ export interface Prediction {
     curricularUnits2ndSemApproved?: number;
     curricularUnits2ndSemGrade?: number;
     curricularUnits2ndWithoutEvaluations?: number;
-    gdp?: number
     predictRisk?: number
 }

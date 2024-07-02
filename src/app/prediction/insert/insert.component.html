@@ -1,8 +1,19 @@
-<h1>Dropout Student Prediction</h1>
+<h1>Formulario de Predicción</h1>
 
 <form [formGroup]="formStudent" method="post">
 
     <div formGroupName = "datosEstudiante">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            <label for="codeStudent">Codigo</label>
+            <input type="text" class="form-control form-control-sm" id="codeStudent" name="codeStudent" formControlName="codeStudent">
+            <div class="form-text text-danger">
+                <!-- <span>
+                Este campo es obligatorio
+                </span> -->
+            </div>
+            </div>
+        </div>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="firstName">Nombre</label>
@@ -361,18 +372,6 @@
             <div class="form-group col-md-6">
                 <label for="curricularUnits2ndWithoutEvaluations">Unidades curriculares 2do semestre (sin evaluaciones)</label>
                 <input type="text" class="form-control form-control-sm" id="curricularUnits2ndWithoutEvaluations" name="curricularUnits2ndWithoutEvaluations" formControlName="curricularUnits2ndWithoutEvaluations" placeholder="0 - 12">
-                <div class="form-text text-danger">
-                    <!-- <span>
-                    Este campo es obligatorio
-                    </span> -->
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="gdp">GDP</label>
-                <input type="text" class="form-control form-control-sm" id="gdp" name="gdp" formControlName="gdp">
                 <div class="form-text text-danger">
                     <!-- <span>
                     Este campo es obligatorio

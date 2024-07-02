@@ -22,6 +22,7 @@ export class InsertComponent implements OnInit {
 
   public formStudent = new FormGroup({
     datosEstudiante: new FormGroup({
+      codeStudent: new FormControl(''),
       firstName: new FormControl(''),
       lastName: new FormControl(''),
       maritalStatus: new FormControl(''),
@@ -47,7 +48,6 @@ export class InsertComponent implements OnInit {
       curricularUnits2ndSemApproved: new FormControl(''),
       curricularUnits2ndSemGrade: new FormControl(''),
       curricularUnits2ndWithoutEvaluations: new FormControl(''),
-      gdp: new FormControl(''),
     })
   });
 
@@ -109,9 +109,9 @@ export class InsertComponent implements OnInit {
 
     // this.getPredictRisk();
 
-    this.fillData();
+    // this.fillData();
 
-    // this.dataTest();
+    this.dataTest();
 
     console.log("body: ", this.body)
     this.apiService.prediction(this.body).subscribe ( 
@@ -125,6 +125,7 @@ export class InsertComponent implements OnInit {
           timer: 1500
         }).then((result) => {
           // console.log(data);
+          // console.log(data.predictRisk);
         });
       }, (error) => {
       swal.fire({
@@ -142,6 +143,9 @@ export class InsertComponent implements OnInit {
   }
 
   fillData() {
+    this.body.codeStudent = String(this.formStudent.controls['datosEstudiante'].controls['codeStudent'].value);
+    this.body.firstName = String(this.formStudent.controls['datosEstudiante'].controls['firstName'].value);
+    this.body.lastName = String(this.formStudent.controls['datosEstudiante'].controls['lastName'].value);
     this.body.maritalStatus = Number(this.formStudent.controls['datosEstudiante'].controls['maritalStatus'].value);
     this.body.applicationMode =  Number(this.formStudent.controls['datosEstudiante'].controls['applicationMode'].value);
     this.body.applicationOrder = Number(this.formStudent.controls['datosEstudiante'].controls['applicationOrder'].value);
@@ -165,7 +169,6 @@ export class InsertComponent implements OnInit {
     this.body.curricularUnits2ndSemApproved = Number(this.formStudent.controls['datosEstudiante'].controls['curricularUnits2ndSemApproved'].value);
     this.body.curricularUnits2ndSemGrade = Number(this.formStudent.controls['datosEstudiante'].controls['curricularUnits2ndSemGrade'].value);
     this.body.curricularUnits2ndWithoutEvaluations = Number(this.formStudent.controls['datosEstudiante'].controls['curricularUnits2ndWithoutEvaluations'].value);
-    this.body.gdp = Number(this.formStudent.controls['datosEstudiante'].controls['gdp'].value);
 
     this.body.predictRisk = this.getPredictRisk();
   }
@@ -189,7 +192,9 @@ export class InsertComponent implements OnInit {
   }
 
   dataTest() {
-
+    this.body.codeStudent = "U202014690";
+    this.body.firstName = "Niel";
+    this.body.lastName = "Casafranca";
     this.body.maritalStatus = 1;
     this.body.applicationMode =  8;
     this.body.applicationOrder = 5;
@@ -212,7 +217,6 @@ export class InsertComponent implements OnInit {
     this.body.curricularUnits2ndSemEvaluations = 0;
     this.body.curricularUnits2ndSemApproved = 0;
     this.body.curricularUnits2ndSemGrade = 0.0;
-    this.body.curricularUnits2ndWithoutEvaluations = 0,
-    this.body.gdp = 1.74;
+    this.body.curricularUnits2ndWithoutEvaluations = 0;
   }
 }
