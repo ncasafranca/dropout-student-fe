@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { PredictionComponent } from './prediction/prediction.component';
 import { InsertComponent } from './prediction/insert/insert.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     PredictionComponent,
     InsertComponent,
+    LineChartComponent,
   ],
   imports: [
     BrowserModule,
