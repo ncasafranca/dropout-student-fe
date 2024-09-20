@@ -1,5 +1,13 @@
 <div class="box">
     <div>
+        <input type="text" class="form-control form-control-sm" id="code">
+        <button class="btn btn-success" (click)="filterRows()">Buscar</button>  
+    </div>   
+</div>
+
+
+<div class="box">
+    <div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -12,11 +20,17 @@
             </thead>
             <tbody>
                 <tr *ngFor="let dato of datos">
-                    <td>{{dato["codeStudent"]}}</td>
-                    <td>{{dato["firstName"]}}</td>
-                    <td>{{dato["lastName"]}}</td>
-                    <td>{{dato["ts"]}}</td>
-                    <td>{{dato["predictRisk"]}}</td>
+                    <td *ngIf="this.filter && dato.codeStudent === this.codigo">{{dato["codeStudent"]}}</td>
+                    <td *ngIf="dato.codeStudent === this.codigo">{{dato["firstName"]}}</td>
+                    <td *ngIf="dato.codeStudent === this.codigo">{{dato["lastName"]}}</td>
+                    <td *ngIf="dato.codeStudent === this.codigo">{{dato["ts"]}}</td>
+                    <td *ngIf="dato.codeStudent === this.codigo">{{dato["predictRisk"]}}%</td>
+
+                    <td *ngIf="!this.filter">{{dato["codeStudent"]}}</td>
+                    <td *ngIf="!this.filter">{{dato["firstName"]}}</td>
+                    <td *ngIf="!this.filter">{{dato["lastName"]}}</td>
+                    <td *ngIf="!this.filter">{{dato["ts"]}}</td>
+                    <td *ngIf="!this.filter">{{dato["predictRisk"]}}%</td>
                 </tr>
             </tbody>
         </table>

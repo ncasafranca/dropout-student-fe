@@ -9,34 +9,38 @@ import { ApiService } from 'src/app/service/api.service';
 export class TableComponent {
   datos: any;
   ts: any;
+  codigo: any;
+  filter: boolean = false;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.loadDataTable();
-    let date = new Date(1720054956 * 1000);
-    console.log(date.toLocaleString());
+
+    console.log(this.filter);
+  }
+
+  filterRows() {
+    this.codigo = (<HTMLInputElement>document.getElementById("code"))!.value;
+
+    if (this.codigo === "") {
+      this.filter = false;
+    } else {
+      this.filter = true;
+    }
   }
 
   loadDataTable() {
 
     this.apiService.getPredictions().subscribe ( 
       (data) => {
-
-        // this.datos = data;
-        // console.log(data);
-
-        for( let i = 0; i < data.length; i++){
-
-          console.log(data[i].ts);
-
+        for( let i = 0; i < data.length; i++){ //Preprocesar los campos para la visualizacion
           let date = new Date(data[i].ts * 1000);
           data[i].ts = date.toLocaleString();
-
+          data[i].predictRisk = Number(data[i].predictRisk.toFixed(2))*100;
         }
 
         this.datos = data;
 
-        // console.log(data.length);
       }, (error) => {
       console.log(error);
     });
