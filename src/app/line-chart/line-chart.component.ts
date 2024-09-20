@@ -44,10 +44,21 @@ export class LineChartComponent implements OnInit{
         ]
       };
   
-        this.chart = new Chart("chart", {
-          type: 'line' as ChartType,
-          data: data
-        });
+      // const config = {
+      //   type: 'line',
+      //   data: {},
+      //   options: {},
+      //   plugins: []
+      // };
+
+      this.chart = new Chart("chart", {
+        type: 'line' as ChartType,
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: true
+        }
+      });
     }, 1000);
     
   }
