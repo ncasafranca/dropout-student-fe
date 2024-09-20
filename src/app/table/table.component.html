@@ -1,0 +1,20 @@
+<div class="box">
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of datos">
+                    <td>{{dato["codeStudent"]}}</td>
+                    <td>{{dato["firstName"]}}</td>
+                    <td>{{dato["lastName"]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

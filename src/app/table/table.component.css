@@ -5,6 +5,11 @@
 }
 
 .box div {
-    width: 50%;
-    height: 50%;
+    margin-top: 50px;
+    width: 70%;
+    height: 70%;
+}
+
+table {
+    width: 100%;
 }
