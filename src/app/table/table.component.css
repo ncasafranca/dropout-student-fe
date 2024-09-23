@@ -17,3 +17,13 @@ table {
 .form-control {
     width: 60%;
 }
+
+#logo {
+    width: 25px;
+    height: 25px;
+}
+
+#view {
+    border: 0px solid;
+    background-color: transparent;
+}

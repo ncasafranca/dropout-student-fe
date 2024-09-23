@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-table',
@@ -11,6 +12,9 @@ export class TableComponent {
   ts: any;
   codigo: any;
   filter: boolean = false;
+  
+  datarow: any;
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -29,6 +33,8 @@ export class TableComponent {
     }
   }
 
+
+
   loadDataTable() {
 
     this.apiService.getPredictions().subscribe ( 
@@ -44,5 +50,10 @@ export class TableComponent {
       }, (error) => {
       console.log(error);
     });
+  }
+
+  show(dato: any): void {
+    this.datarow = dato;
+    console.log(this.datarow);
   }
 }
