@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { TableComponent } from './table/table.component';
 import { ModalComponent } from './modal/modal.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ModalComponent } from './modal/modal.component';
     LineChartComponent,
     TableComponent,
     ModalComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

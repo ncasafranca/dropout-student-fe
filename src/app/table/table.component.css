@@ -5,17 +5,13 @@
 }
 
 .box div {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 70%;
     height: 70%;
 }
 
 table {
     width: 100%;
-}
-
-.form-control {
-    width: 60%;
 }
 
 #logo {
