@@ -16,7 +16,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
                     <th scope="col">Fecha</th>
-                    <th scope="col">Riesgo</th>
+                    <th scope="col">Estado</th>
                     <th scope="col">Acción</th>
                 </tr>
             </thead>
@@ -26,14 +26,14 @@
                     <td *ngIf="dato.codeStudent === this.codigo">{{dato["firstName"]}}</td>
                     <td *ngIf="dato.codeStudent === this.codigo">{{dato["lastName"]}}</td>
                     <td *ngIf="dato.codeStudent === this.codigo">{{dato["ts"]}}</td>
-                    <td *ngIf="dato.codeStudent === this.codigo">{{dato["predictRisk"]}}%</td>
-                    <td *ngIf="dato.codeStudent === this.codigo">Ver</td>
+                    <td *ngIf="dato.codeStudent === this.codigo"><img id="logo" src="{{dato['path_url_img']}}">{{dato["predictRisk"]}}</td>
+                    <td *ngIf="dato.codeStudent === this.codigo"><button (click)="show(dato)" type="button" data-bs-toggle="modal" data-bs-target="#predictionModal" id="view"><img id="logo"src="assets/img/view-svgrepo-com.svg"></button></td>
 
                     <td *ngIf="!this.filter">{{dato["codeStudent"]}}</td>
                     <td *ngIf="!this.filter">{{dato["firstName"]}}</td>
                     <td *ngIf="!this.filter">{{dato["lastName"]}}</td>
                     <td *ngIf="!this.filter">{{dato["ts"]}}</td>
-                    <td *ngIf="!this.filter">{{dato["predictRisk"]}}%</td>
+                    <td *ngIf="!this.filter"><img id="logo" src="{{dato['path_url_img']}}"> {{dato["predictRisk"]}} </td>
                     <td *ngIf="!this.filter"><button (click)="show(dato)" type="button" data-bs-toggle="modal" data-bs-target="#predictionModal" id="view"><img id="logo"src="assets/img/view-svgrepo-com.svg"></button></td>
                 </tr>
             </tbody>

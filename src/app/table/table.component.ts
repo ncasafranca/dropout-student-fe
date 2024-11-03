@@ -12,7 +12,6 @@ export class TableComponent {
   ts: any;
   codigo: any;
   filter: boolean = false;
-  
   datarow: any;
 
   constructor(private apiService: ApiService) { }
@@ -41,8 +40,22 @@ export class TableComponent {
       (data) => {
         for( let i = 0; i < data.length; i++){ //Preprocesar los campos para la visualizacion
           let date = new Date(data[i].ts * 1000);
+          let status;
           data[i].ts = date.toLocaleString();
-          data[i].predictRisk = Number(data[i].predictRisk.toFixed(2))*100;
+
+          // const statusLogo = document.getElementById('logo') as HTMLImageElement;
+
+          if (Number(data[i].predictRisk.toFixed(2)) > 0.5) {
+            status = "RIESGO";
+            data[i].path_url_img = "assets/img/warning-svgrepo-com.svg";
+          } else {
+            status = "OK"
+            data[i].path_url_img = "assets/img/ok-svgrepo-com.svg";
+          }
+
+          data[i].predictRisk = status;
+
+          // data[i].predictRisk = Number(data[i].predictRisk.toFixed(2))*100;
         }
 
         this.datos = data;
