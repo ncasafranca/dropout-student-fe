@@ -19,7 +19,7 @@ export class TableComponent {
   ngOnInit(): void {
     this.loadDataTable();
 
-    console.log(this.filter);
+    // console.log(this.filter);
   }
 
   filterRows() {

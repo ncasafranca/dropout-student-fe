@@ -14,6 +14,7 @@ export class LineChartComponent implements OnInit{
   years: number[] = [ 2024, 2023, 2022, 2021, 2020 ]
   labels: String[] = [];
   datos: number[] = [];
+  datosRisk: number[] = [];
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -43,9 +44,16 @@ export class LineChartComponent implements OnInit{
       labels: this.labels,
       datasets: [
         {
-          label: 'Predicciones realizadas',
+          label: 'Cantidad',
           data: this.datos,
           borderColor: 'rgb(75, 192, 192)',
+          fill: false,
+          tension: 0.1
+        }, 
+        {
+          label: 'Riesgo',
+          data: this.datosRisk,
+          borderColor: 'rgb(254, 0, 0)',
           fill: false,
           tension: 0.1
         }
@@ -57,7 +65,17 @@ export class LineChartComponent implements OnInit{
       data: data,
       options: {
         responsive: false,
-        maintainAspectRatio: true
+        maintainAspectRatio: true,
+        plugins: {
+          title: {
+              display: true,
+              text: 'Predicciones',
+              padding: {
+                  top: 10,
+                  bottom: 30
+              }
+          }
+      }
       }
     });
   }
@@ -66,7 +84,7 @@ export class LineChartComponent implements OnInit{
 
     this.apiService.getPredictions().subscribe ( 
       (data) => {
-        console.log(data);
+        // console.log(data);
       }, (error) => {
       console.log(error);
     });
@@ -75,7 +93,7 @@ export class LineChartComponent implements OnInit{
   loadDataResumen(year: number) {
     this.apiService.getQuantityPredictions(year).subscribe ( 
       (data) => {
-        console.log(data[0]);
+        // console.log(data[0]);
         
         let month = "";
         for(let i = 0; i < 12; i++) {
@@ -96,9 +114,8 @@ export class LineChartComponent implements OnInit{
           }
           this.labels.push(month);
           this.datos.push(data[i].quantity);
+          this.datosRisk.push(data[i].quantityRisk);
         }
-        console.log(`Labels: ${this.labels}`);
-        console.log(`Datos: ${this.datos}`);
       }, (error) => {
       console.log(error);
     });
@@ -110,6 +127,7 @@ export class LineChartComponent implements OnInit{
 
     this.labels = [];
     this.datos = [];
+    this.datosRisk = [];
 
     this.loadDataResumen(this.year);
 
@@ -121,6 +139,7 @@ export class LineChartComponent implements OnInit{
 
   updateChart() {
     this.chart.data.datasets[0].data = this.datos;
+    this.chart.data.datasets[1].data = this.datosRisk;
     this.chart.data.labels = this.labels;
     this.chart.update();
   };
