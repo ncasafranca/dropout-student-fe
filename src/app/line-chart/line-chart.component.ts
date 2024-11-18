@@ -9,14 +9,16 @@ import { ApiService } from '../service/api.service';
 })
 export class LineChartComponent implements OnInit{
   public chart: Chart;
-
+  year: number;
+  yearDefault: number = 2024;
+  years: number[] = [ 2024, 2023, 2022, 2021, 2020 ]
   labels: String[] = [];
   datos: number[] = [];
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     // this.loadData();
-    this.loadDataResumen(2024);
+    this.loadDataResumen(this.yearDefault);
     // const data = {
     //   labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"],
     //   datasets: [
@@ -31,36 +33,33 @@ export class LineChartComponent implements OnInit{
     // };
 
     setTimeout(() => {
-      const data = {
-        labels: this.labels,
-        datasets: [
-          {
-            label: 'Predicciones realizadas',
-            data: this.datos,
-            borderColor: 'rgb(75, 192, 192)',
-            fill: false,
-            tension: 0.1
-          }
-        ]
-      };
-  
-      // const config = {
-      //   type: 'line',
-      //   data: {},
-      //   options: {},
-      //   plugins: []
-      // };
-
-      this.chart = new Chart("chart", {
-        type: 'line' as ChartType,
-        data: data,
-        options: {
-          responsive: false,
-          maintainAspectRatio: true
-        }
-      });
+      this.renderChart();
     }, 1000);
     
+  }
+
+  renderChart() {
+    const data = {
+      labels: this.labels,
+      datasets: [
+        {
+          label: 'Predicciones realizadas',
+          data: this.datos,
+          borderColor: 'rgb(75, 192, 192)',
+          fill: false,
+          tension: 0.1
+        }
+      ]
+    };
+
+    this.chart = new Chart("chart", {
+      type: 'line' as ChartType,
+      data: data,
+      options: {
+        responsive: false,
+        maintainAspectRatio: true
+      }
+    });
   }
 
   loadData() {
@@ -103,5 +102,26 @@ export class LineChartComponent implements OnInit{
       }, (error) => {
       console.log(error);
     });
-  }  
+  }
+
+  loadResumenByYear() {
+
+    this.year = Number((<HTMLSelectElement>document.getElementById("year"))!.value);
+
+    this.labels = [];
+    this.datos = [];
+
+    this.loadDataResumen(this.year);
+
+    setTimeout(() => {
+      this.updateChart();
+    }, 500);
+    
+  }
+
+  updateChart() {
+    this.chart.data.datasets[0].data = this.datos;
+    this.chart.data.labels = this.labels;
+    this.chart.update();
+  };
 }

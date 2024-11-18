@@ -1,5 +1,11 @@
+
 <div class="box">
     <div>
+        <select name="year" id="year" class="form-control" (change)="loadResumenByYear()">
+            <option *ngFor="let year of years">
+                {{ year }}
+            </option>
+        </select>
         <canvas id="chart">{{ chart }} </canvas>
     </div>
 </div>
