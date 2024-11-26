@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Cargar estudiantes</h2>
+    <input type="file" (change)="onFileChange($event)" />
+    <!-- <input type="file" /> -->
+    <!-- <div *ngIf="excelData"> -->
+    <div>
+        <h3>JSON Data:</h3>
+        <!-- <pre>{{ jsonData | json }}</pre> -->
+        <pre>{{ statusUpload }}</pre>
+        <button *ngIf="enableButtonPredecir" class="btn btn-primary" (click)="predecirArchivo()">
+            Predecir
+        </button>
+    </div>
+</div>

@@ -11,6 +11,8 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { TableComponent } from './table/table.component';
 import { ModalComponent } from './modal/modal.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MenuComponent } from './prediction/menu/menu.component';
+import { UploadComponent } from './prediction/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     TableComponent,
     ModalComponent,
     NavbarComponent,
+    MenuComponent,
+    UploadComponent,
   ],
   imports: [
     BrowserModule,
